@@ -6,16 +6,16 @@ en:
     pieces_connector: ! ' / '
     not: not
     not_on: not on
-    on_the: on the
+    "on": on the %{sentence}
     in: in
     until: until %{date}
     on_weekends: on weekends
     on_weekdays: on weekdays
     days_of_month:
-      default: days of the month
+      other: days of the month
       one: day of the month
     days_of_year:
-      default: days of the year
+      other: days of the year
       one: day of the year
     at_hours_of_the_day:
       other: on the %{segments} hours of the day
