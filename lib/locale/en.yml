@@ -12,20 +12,20 @@ en:
     on_weekends: on weekends
     on_weekdays: on weekdays
     days_of_month:
-      other: days of the month
-      one: day of the month
+      other: ! "%{segments} days"
+      one: ! "%{segments} day"
     days_of_year:
-      other: days of the year
-      one: day of the year
+      other: ! "%{segments} days"
+      one: ! "%{segments} day"
     at_hours_of_the_day:
-      other: on the %{segments} hours of the day
-      one: on the %{segments} hour of the day
+      other: on the %{segments} hours
+      one: on the %{segments} hour
     at_minutes_of_hour:
-      other: at the %{segments} minutes of the hour
-      one: at the %{segments} minute of the hour
+      other: at the %{segments} minutes
+      one: at the %{segments} minute
     at_seconds_of_minute:
-      other: at the %{segments} seconds of the minute
-      one: at the %{segments} second of the minute
+      other: at the %{segments} seconds
+      one: at the %{segments} second
     on_days: on %{days}
     days_on:
       - Sundays

@@ -48,8 +48,11 @@ module IceCube
 
       def connected_sentence(array, connector)
         sentence = self.sentence(array)
+
         if connector.is_a? Hash
-          on_the = (sentence !~ Regexp.new("^[#{Regexp.quote(connector[:condition])}]")) ? connector[:default] : connector[:exception]
+          condition = Regexp.quote(connector[:condition])
+          regexp = Regexp.new("^[#{condition}]")
+          on_the = sentence !~ regexp ? connector[:default] : connector[:exception]
         else
           on_the = "#{connector} "
         end

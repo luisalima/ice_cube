@@ -160,27 +160,27 @@ describe IceCube::Schedule, 'to_s' do
 
   it 'should be able to say the days of the month something happens' do
     rule_str = IceCube::Rule.monthly.day_of_month(1, 15, 30).to_s
-    rule_str.should == 'monthly on the 1st, 15th and 30th days of the month'
+    rule_str.should == 'monthly on the 1st, 15th and 30th days'
   end
 
   it 'should be able to say what day of the year something happens' do
     rule_str = IceCube::Rule.yearly.day_of_year(30).to_s
-    rule_str.should == 'yearly on the 30th day of the year'
+    rule_str.should == 'yearly on the 30th day'
   end
 
   it 'should be able to say what hour of the day something happens' do
     rule_str = IceCube::Rule.daily.hour_of_day(6, 12).to_s
-    rule_str.should == 'daily on the 6th and 12th hours of the day'
+    rule_str.should == 'daily on the 6th and 12th hours'
   end
 
   it 'should be able to say what minute of an hour something happens - with special suffix minutes' do
     rule_str = IceCube::Rule.hourly.minute_of_hour(10, 11, 12, 13, 14, 15).to_s
-    rule_str.should == 'hourly at the 10th, 11th, 12th, 13th, 14th and 15th minutes of the hour'
+    rule_str.should == 'hourly at the 10th, 11th, 12th, 13th, 14th and 15th minutes'
   end
 
   it 'should be able to say what seconds of the minute something happens' do
     rule_str = IceCube::Rule.minutely.second_of_minute(10, 11).to_s
-    rule_str.should == 'minutely at the 10th and 11th seconds of the minute'
+    rule_str.should == 'minutely at the 10th and 11th seconds'
   end
 
   it 'should be able to reflect until dates' do

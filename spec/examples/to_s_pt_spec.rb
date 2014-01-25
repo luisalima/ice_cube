@@ -89,15 +89,13 @@ describe IceCube::Schedule, 'to_s' do
   end
 
   it 'should order dates that are out of order' do
-    schedule = IceCube::Schedule.new Time.now
-    schedule.add_recurrence_time Time.local(2010, 3, 20)
+    schedule = IceCube::Schedule.new Time.local(2010, 3, 20)
     schedule.add_recurrence_time Time.local(2010, 3, 19)
     schedule.to_s.should == '19. Março 2010, 20. Março 2010'
   end
 
   it 'should remove duplicate rdates' do
-    schedule = IceCube::Schedule.new Time.now
-    schedule.add_recurrence_time Time.local(2010, 3, 20)
+    schedule = IceCube::Schedule.new Time.local(2010, 3, 20)
     schedule.add_recurrence_time Time.local(2010, 3, 20)
     schedule.to_s.should == '20. Março 2010'
   end
@@ -125,7 +123,7 @@ describe IceCube::Schedule, 'to_s' do
     schedule.to_s.should == schedule.rrules[0].to_s
   end
 
-  it 'should be able to say the last monday of the month' do
+  it 'should be able to say the last thursday of the month' do
     rule_str = IceCube::Rule.monthly.day_of_week(:thursday => [-1]).to_s
     rule_str.should == 'cada mês na última Quinta'
   end
@@ -135,7 +133,7 @@ describe IceCube::Schedule, 'to_s' do
     rule_str.should == 'cada ano no Junho e Julho'
   end
 
-  it 'should be able to say the second to last monday of the month' do
+  it 'should be able to say the second to last thursday of the month' do
     pending 'penultimo'
     rule_str = IceCube::Rule.monthly.day_of_week(:thursday => [-2]).to_s
     rule_str.should == 'cada mês na penultima Quinta'

@@ -9,19 +9,19 @@ fr:
       default: "excepté le "
       exception: excepté l’
       condition: "^[aeiou]"
-    on_the:
-      default: "le "
-      exception: l’
+    "on":
+      default: le %{sentence}
+      exception: l’ %{sentence}
       condition: "^[aeiou]"
     in: en
     until: jusqu’au %{date}
     on_weekends: les fins de semaine
     on_weekdays: les jours de semaine
     days_of_month:
-      default: jour du mois
+      other: ! "%{segments} jour du mois"
     days_of_year:
-      default: jours de l’année
-      one: jour de l’année
+      other: ! "%{segments} jours de l’année"
+      one: ! "%{segments} jour de l’année"
     at_hours_of_the_day:
       other: à la %{segments} heure du jour
       one: à la %{segments} heure du jour

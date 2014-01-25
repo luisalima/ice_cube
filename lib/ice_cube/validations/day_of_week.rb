@@ -18,8 +18,8 @@ module IceCube
       attr_reader :day, :occ
 
       StringBuilder.register_formatter(:day_of_week) do |segments|
-        str = I18n.t("ice_cube.on", sentence: segments)
-        StringBuilder.sentence(str).strip
+        str = StringBuilder.sentence(segments).strip
+        I18n.t("ice_cube.on", sentence: str)
       end
 
       def initialize(day, occ)
