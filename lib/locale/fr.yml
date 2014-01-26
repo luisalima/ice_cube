@@ -16,7 +16,8 @@ fr:
     in: en
     until: jusqu’au %{date}
     on_weekends: les fins de semaine
-    on_weekdays: les jours de semaine
+    on_working_days: les jours de semaine
+    on_weekdays: ! "%{sentence}"
     days_of_month:
       other: ! "%{segments} jour du mois"
     days_of_year:

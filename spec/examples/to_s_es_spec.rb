@@ -88,15 +88,13 @@ describe IceCube::Schedule, 'to_s' do
   end
 
   it 'should order dates that are out of order' do
-    schedule = IceCube::Schedule.new Time.now
-    schedule.add_recurrence_time Time.local(2010, 3, 20)
+    schedule = IceCube::Schedule.new Time.local(2010, 3, 20)
     schedule.add_recurrence_time Time.local(2010, 3, 19)
     schedule.to_s.should == '19 de Marzo 2010, 20 de Marzo 2010'
   end
 
   it 'should remove duplicate rdates' do
-    schedule = IceCube::Schedule.new Time.now
-    schedule.add_recurrence_time Time.local(2010, 3, 20)
+    schedule = IceCube::Schedule.new Time.local(2010, 3, 20)
     schedule.add_recurrence_time Time.local(2010, 3, 20)
     schedule.to_s.should == '20 de Marzo 2010'
   end
@@ -137,12 +135,12 @@ describe IceCube::Schedule, 'to_s' do
   it 'should be able to say the second to last monday of the month' do
     pending 'penultimo'
     rule_str = IceCube::Rule.monthly.day_of_week(:thursday => [-2]).to_s
-    rule_str.should == 'mensualmente del segundo al último Jueves del mes'
+    rule_str.should == 'mensualmente del segundo al último Jueves'
   end
 
   it 'should be able to say the days of the month something happens' do
     rule_str = IceCube::Rule.monthly.day_of_month(1, 15, 30).to_s
-    rule_str.should == 'mensualmente en los días 1, 15 y 30 del mes'
+    rule_str.should == 'mensualmente en los días 1, 15 y 30'
   end
 
   it 'should be able to say what day of the year something happens' do

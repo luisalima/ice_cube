@@ -10,7 +10,8 @@ en:
     in: in
     until: until %{date}
     on_weekends: on weekends
-    on_weekdays: on weekdays
+    on_working_days: on weekdays
+    on_weekdays: ! "%{sentence}"
     days_of_month:
       other: ! "%{segments} days"
       one: ! "%{segments} day"

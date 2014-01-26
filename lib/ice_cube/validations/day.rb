@@ -54,7 +54,7 @@ module IceCube
         if validation_days == [0, 6]
           I18n.t("ice_cube.on_weekends")
         elsif validation_days == (1..5).to_a
-          I18n.t("ice_cube.on_weekdays")
+          I18n.t("ice_cube.on_working_days")
         else
           day_names = ->(d){ "#{I18n.t("ice_cube.days_on")[d]}" }
           segments = validation_days.map(&day_names)

@@ -6,16 +6,18 @@ es:
     pieces_connector: ! ', '
     not: excepto
     not_on: excepto el
-    on_the: "en el"
+    "on": "en %{sentence}"
     in: "en"
     until: hasta el %{date}
     on_weekends: el fin de semana
-    on_weekdays: en días laborables
+    on_working_days: en días laborables
+    on_weekdays: el %{sentence}
     days_of_month:
-      default: día del mes
+      other: los días %{segments}
+      one: el día %{segments}
     days_of_year:
-      one: día del año
-      other: día del año
+      one: el día %{segments}
+      other: los días %{segments}
     at_hours_of_the_day:
       one: en la hora %{segments}
       other: en las horas %{segments}

@@ -6,23 +6,24 @@ de:
     pieces_connector: ! ', '
     not: nicht
     not_on: außer
-    on_the: am
+    "on": am %{sentence}
     in: im
     until: bis %{date}
     on_weekends: an Wochenenden
-    on_weekdays: an Wochentagen
+    on_working_days: an Wochentagen
+    on_weekdays: ! "%{sentence}"
     days_of_month:
-      default: Tag des Monats
-      one: Tag des Monats
+      other: ! "%{segments} Tag"
+      one: ! "%{segments} Tag"
     days_of_year:
-      other: Tag des Jahres
-      one: Tag des Jahres
+      other: ! "%{segments} Tag"
+      one: ! "%{segments} Tag"
     at_hours_of_the_day:
-      other: zur %{segments} Stunde des Tages
+      other: zur %{segments} Stunde
     at_minutes_of_hour:
-      other: zur %{segments} Minute der Stunde
+      other: zur %{segments} Minute
     at_seconds_of_minute:
-      other: zur %{segments} Sekunde der Minute
+      other: zur %{segments} Sekunde
     on_days: an %{days}
     days_on:
       - Sonntagen

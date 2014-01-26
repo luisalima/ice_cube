@@ -89,15 +89,13 @@ describe IceCube::Schedule, 'to_s' do
   end
 
   it 'should order dates that are out of order' do
-    schedule = IceCube::Schedule.new Time.now
-    schedule.add_recurrence_time Time.local(2010, 3, 20)
+    schedule = IceCube::Schedule.new Time.local(2010, 3, 20)
     schedule.add_recurrence_time Time.local(2010, 3, 19)
     schedule.to_s.should == '19. März 2010, 20. März 2010'
   end
 
   it 'should remove duplicate rdates' do
-    schedule = IceCube::Schedule.new Time.now
-    schedule.add_recurrence_time Time.local(2010, 3, 20)
+    schedule = IceCube::Schedule.new Time.local(2010, 3, 20)
     schedule.add_recurrence_time Time.local(2010, 3, 20)
     schedule.to_s.should == '20. März 2010'
   end
@@ -142,27 +140,27 @@ describe IceCube::Schedule, 'to_s' do
 
   it 'should be able to say the days of the month something happens' do
     rule_str = IceCube::Rule.monthly.day_of_month(1, 15, 30).to_s
-    rule_str.should == 'monatlich am 1., 15. und 30. Tag des Monats'
+    rule_str.should == 'monatlich am 1., 15. und 30. Tag'
   end
 
   it 'should be able to say what day of the year something happens' do
     rule_str = IceCube::Rule.yearly.day_of_year(30).to_s
-    rule_str.should == 'jährlich am 30. Tag des Jahres'
+    rule_str.should == 'jährlich am 30. Tag'
   end
 
   it 'should be able to say what hour of the day something happens' do
     rule_str = IceCube::Rule.daily.hour_of_day(6, 12).to_s
-    rule_str.should == 'täglich zur 6. und 12. Stunde des Tages'
+    rule_str.should == 'täglich zur 6. und 12. Stunde'
   end
 
   it 'should be able to say what minute of an hour something happens - with special suffix minutes' do
     rule_str = IceCube::Rule.hourly.minute_of_hour(10, 11, 12, 13, 14, 15).to_s
-    rule_str.should == 'stündlich zur 10., 11., 12., 13., 14. und 15. Minute der Stunde'
+    rule_str.should == 'stündlich zur 10., 11., 12., 13., 14. und 15. Minute'
   end
 
   it 'should be able to say what seconds of the minute something happens' do
     rule_str = IceCube::Rule.minutely.second_of_minute(10, 11).to_s
-    rule_str.should == 'minütlich zur 10. und 11. Sekunde der Minute'
+    rule_str.should == 'minütlich zur 10. und 11. Sekunde'
   end
 
   it 'should be able to reflect until dates' do

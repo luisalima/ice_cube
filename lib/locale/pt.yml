@@ -11,7 +11,8 @@ pt:
     in: "no"
     until: até %{date}
     on_weekends: no fim da semana
-    on_weekdays: em dia de útil
+    on_working_days: em dia de útil
+    on_weekdays: ! "%{sentence}"
     days_of_month:
       one: dia %{segments}
       other: dia %{segments}

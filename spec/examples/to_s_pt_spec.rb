@@ -124,6 +124,7 @@ describe IceCube::Schedule, 'to_s' do
   end
 
   it 'should be able to say the last thursday of the month' do
+    pending "longer strings!"
     rule_str = IceCube::Rule.monthly.day_of_week(:thursday => [-1]).to_s
     rule_str.should == 'cada mês na última Quinta'
   end
