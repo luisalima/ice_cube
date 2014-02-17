@@ -1,17 +1,19 @@
+
+
 pt:
   ice_cube:
     times:
-      other: ! '%{count} vêses'
-      one: ! '%{count} vês'
+      other: ! '%{count} vezes'
+      one: ! '%{count} vez'
     pieces_connector: ! ', '
-    not: excepto
-    not_on: senão
+    not: exceto
+    not_on: exceto
     "on": "no %{sentence}"
     at: "ao"
     in: "no"
     until: até %{date}
-    on_weekends: no fim da semana
-    on_working_days: em dia de útil
+    on_weekends: no fim de semana
+    on_working_days: nos dias úteis
     on_weekdays: ! "%{sentence}"
     days_of_month:
       one: dia %{segments}
@@ -54,7 +56,7 @@ pt:
       other: a cada %{count} segundos
     each_month:
       one: cada mês
-      other: a cada %{count} mêses
+      other: a cada %{count} meses
     each_minute:
       one: cada minuto
       other: a cada %{count} minutos
